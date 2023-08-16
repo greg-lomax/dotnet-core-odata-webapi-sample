@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp6.0</TargetFramework>
+		<RootNamespace>odata_error</RootNamespace>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="TestData\ControllerTests.Data.AzureClassUser.json" />
+	  <Content Remove="TestData\ControllerTests.Data.ConfigNode.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="TestData\ControllerTests.Data.AzureClassUser.json" />
+	  <EmbeddedResource Include="TestData\ControllerTests.Data.ConfigNode.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OData" Version="8.2.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.21" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.21" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.21" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+
+</Project>
